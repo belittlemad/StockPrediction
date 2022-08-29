@@ -55,7 +55,7 @@ with st.form("my_form"):
             #train_size,test_size
             ds_train, ds_test = ds_scaled[0:train_size,:], ds_scaled[train_size:len(ds_scaled),:1]
             #len(ds_train),len(ds_test)
-            def what(dataset,step):
+            def create_ds(dataset,step):
                 Xtrain, Ytrain = [], []
                 for i in range(len(dataset)-step-1):
                     a = dataset[i:(i+step), 0]
