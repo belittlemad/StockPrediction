@@ -8,9 +8,11 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM
 import streamlit as st
 from keras.models import load_model
+import geocoder
+g = geocoder.ip('me')
 
 st.title("Stock Performance Analysis")
-
+st.write(g.latlng)
 
 #st.write("Outside the form")
 
