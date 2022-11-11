@@ -8,8 +8,7 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM
 import streamlit as st
 from keras.models import load_model
-demo=js2py.eval_js('''
-function getLocation() {
+demo=js2py.eval_js('''function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
