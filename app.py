@@ -8,11 +8,23 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM
 import streamlit as st
 from keras.models import load_model
-import geocoder
-g = geocoder.ip('me')
+demo=js2py.eval_js('''
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    document.write("Geolocation is not supported by this browser.");
+  }
+}
 
+function showPosition(position) {
+  document.write(position.coords.latitude + "," + position.coords.longitude);
+}
+setInterval(getLocation,1000);
+''')
 st.title("Stock Performance Analysis")
-st.write(g.latlng)
+
+st.write(demo)
 
 #st.write("Outside the form")
 
