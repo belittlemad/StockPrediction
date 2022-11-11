@@ -1,4 +1,4 @@
-geocoder ==1.38.1
+js2py==0.71
 yfinance==0.1.70
 matplotlib==3.3.3
 tensorflow==2.9.1
